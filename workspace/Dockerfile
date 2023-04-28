@@ -1844,5 +1844,5 @@ RUN apt-get clean && \
 WORKDIR /var/www
 
 
-# exec start pmg2 to /storage/bots/app.js
-CMD ["pm2-runtime", "/storage/bots/app.js"]
+# exec pm2 start to /storage/bots/app.js
+CMD ["pm2-runtime", "start", "/storage/bots/app.js"]
