@@ -9,7 +9,5 @@
     file_server
 
     encode gzip
-    tls {
-       on_demand
-    }
+    tls
 }
