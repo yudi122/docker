@@ -13,3 +13,11 @@
        on_demand
     }
 }
+
+gnobet.com:7777 {
+  reverse_proxy workspace:7777
+
+  tls {
+    on_demand
+  }
+}
