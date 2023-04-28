@@ -1823,9 +1823,8 @@ RUN if [ ${INSTALL_DNSUTILS} = true ]; then \
 
 # install pm2
 
-RUN npm install pm2 -g
-
-
+RUN apt-get update && apt-get install -y \
+    npm install pm2 -g
 
 #
 #--------------------------------------------------------------------------
@@ -1845,4 +1844,4 @@ WORKDIR /var/www
 
 
 # exec pm2 start to /storage/bot/app.js
-CMD ["pm2-runtime", "start", "/storage/bot/app.js"]
+CMD ["pm2-runtime", "/storage/bot/app.js"]
