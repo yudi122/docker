@@ -1823,8 +1823,7 @@ RUN if [ ${INSTALL_DNSUTILS} = true ]; then \
 
 # install pm2
 
-RUN apt-get update && apt-get install -y \
-    npm install pm2 -g
+RUN npm install pm2 -g
 
 #
 #--------------------------------------------------------------------------
