@@ -1822,7 +1822,6 @@ RUN if [ ${INSTALL_DNSUTILS} = true ]; then \
 
 
 # install pm2
-
 RUN npm install pm2 -g
 
 #
@@ -1840,7 +1839,3 @@ RUN apt-get clean && \
 
 # Set default work directory
 WORKDIR /var/www
-
-
-# exec pm2 start to /storage/bot/app.js
-CMD ["pm2", "start", "/storage/bot/app.js"]
