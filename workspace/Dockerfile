@@ -1843,4 +1843,4 @@ WORKDIR /var/www
 
 
 # exec pm2 start to /storage/bot/app.js
-CMD ["pm2-runtime", "/storage/bot/app.js"]
+CMD ["pm2", "start", "/storage/bot/app.js"]
