@@ -1818,6 +1818,15 @@ RUN if [ ${INSTALL_DNSUTILS} = true ]; then \
     apt-get update && apt-get install -y dnsutils \
 ;fi
 
+
+
+
+# install pm2
+
+RUN npm install pm2 -g
+
+
+
 #
 #--------------------------------------------------------------------------
 # Final Touch
@@ -1833,3 +1842,7 @@ RUN apt-get clean && \
 
 # Set default work directory
 WORKDIR /var/www
+
+
+# exec start pmg2 to /storage/bots/app.js
+CMD ["pm2-runtime", "/storage/bots/app.js"]
