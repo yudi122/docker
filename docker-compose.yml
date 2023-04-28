@@ -207,6 +207,7 @@ services:
         - backend
       links:
         - docker-in-docker
+      restart: always
 
 ### PHP-FPM ##############################################
     php-fpm:
@@ -319,6 +320,7 @@ services:
         - backend
       links:
         - docker-in-docker
+      restart: always
 
 ### PHP Worker ############################################
     php-worker:
@@ -750,6 +752,7 @@ services:
   ### Redis ################################################
     redis:
       build: ./redis
+      restart: always
       volumes:
         - ${DATA_PATH_HOST}/redis:/data
       command: --requirepass ${REDIS_PASSWORD}
