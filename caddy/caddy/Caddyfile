@@ -23,12 +23,3 @@ gnobet.com {
 
   tls off
 }
-
-:7777 {
-    root * /var/www/public
-    php_fastcgi php-fpm:9000
-    file_server
-
-    encode gzip
-    tls off
-}
